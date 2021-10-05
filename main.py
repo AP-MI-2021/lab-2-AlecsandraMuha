@@ -1,24 +1,29 @@
 def is_palindrome(n):
     '''
-        determinam daca un numar este palindrom sau nu
-        :return True daca numarul este palindrom sau False in caz contrar
-        '''
-    n = [i for i in str(n)]
-    if n != n[::-1]:
+    determinam daca un numar este palindrom sau nu
+    :return True daca numarul este palindrom sau False in caz contrar
+    '''
+    x = n
+    inv = 0
+    while n:
+        c = x % 10
+        inv = inv * 10 + c
+        x = x // 10
+    if x == inv:
+        return True
+    else:
         return False
-    return True
 def test_is_palindrome():
     n = int(input('Introduceti un numar:'))
     if is_palindrome(n):
         print(' este palindrom')
     else:
         print(' nu este palindrom')
-
 def is_prime(n):
     '''
-       verificam daca un numar este prim sau nu
-       :param n: numarul pe care il verificam daca este prim sau nu
-       :return: True daca numarul este prim sau False in caz contrar
+    verificam daca un numar este prim sau nu
+    :param n: numarul pe care il verificam daca este prim sau nu
+    :return: True daca numarul este prim sau False in caz contrar
     '''
     for d in range(2, int(n ** (1 / 2)) + 1):
         if n % d == 0:
@@ -42,7 +47,6 @@ def test_is_superprime():
         print(' este superprim')
     else:
         print(' nu este superprim')
-
 def main():
     while True:
         print("Optiunea 1.Determină dacă un număr dat este palindrom")
