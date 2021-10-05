@@ -5,11 +5,11 @@ def is_palindrome(n):
     '''
     x = n
     inv = 0
-    while n:
+    while x:
         c = x % 10
         inv = inv * 10 + c
         x = x // 10
-    if x == inv:
+    if n == inv:
         return True
     else:
         return False
@@ -25,15 +25,17 @@ def is_prime(n):
     :param n: numarul pe care il verificam daca este prim sau nu
     :return: True daca numarul este prim sau False in caz contrar
     '''
+
     for d in range(2, int(n ** (1 / 2)) + 1):
         if n % d == 0:
             return False
     return True
 def is_superprime(n):
     '''
-       verificam daca un numar este superprim sau nu
-       :return:True daca numarul este superprim sau False in caz contrar
-       '''
+    verificam daca un numar este superprim sau nu
+    :return:True daca numarul este superprim sau False in caz contrar
+    '''
+
     n = [int(i) for i in str(n)]
     nr = 0
     for i in n:
@@ -54,9 +56,9 @@ def main():
         print("Optiunea 3.iesire")
         option = input("selectati optiunea: ")
         if option == "1":
-            print(test_is_palindrome())
+            test_is_palindrome()
         elif option == "2":
-            print(test_is_superprime())
+            test_is_superprime()
         elif option == "3":
             break
         else:
