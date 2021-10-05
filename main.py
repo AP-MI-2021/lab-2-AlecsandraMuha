@@ -19,6 +19,8 @@ def test_is_palindrome():
         print(' este palindrom')
     else:
         print(' nu este palindrom')
+    assert (is_palindrome(121)) == True
+    assert (is_palindrome(237)) == False
 def is_prime(n):
     '''
     verificam daca un numar este prim sau nu
@@ -49,6 +51,8 @@ def test_is_superprime():
         print(' este superprim')
     else:
         print(' nu este superprim')
+    assert(is_superprime(233)) == True
+    assert(is_superprime(237)) == False
 def main():
     while True:
         print("Optiunea 1.Determină dacă un număr dat este palindrom")
