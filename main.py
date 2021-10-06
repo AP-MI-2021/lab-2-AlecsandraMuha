@@ -81,16 +81,19 @@ def main():
         print("Optiunea 4.iesire")
         option = input("selectati optiunea: ")
         if option == "1":
+            n = int(input("Dati numarul: "))
             test_is_palindrome()
         elif option == "2":
+            n = int(input("Dati numarul: "))
             test_is_superprime()
         elif option == "3":
+            n = int(input("Dati numarul: "))
             test_is_antipalindrome()
         elif option == "4":
             break
         else:
             print("optiune gresita.selecteaza alta optiune")
-main()
+
 
 if __name__ == '__main__':
 
