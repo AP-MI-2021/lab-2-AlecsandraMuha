@@ -14,13 +14,8 @@ def is_palindrome(n):
     else:
         return False
 def test_is_palindrome():
-    n = int(input('Introduceti un numar:'))
-    if is_palindrome(n):
-        print(' este palindrom')
-    else:
-        print(' nu este palindrom')
-    assert (is_palindrome(121)) == True
-    assert (is_palindrome(237)) == False
+    assert is_palindrome(121) == True
+    assert is_palindrome(237) == False
 def is_prime(n):
     '''
     verificam daca un numar este prim sau nu
@@ -46,13 +41,8 @@ def is_superprime(n):
             return False
     return True
 def test_is_superprime():
-    n = int(input('Introduceti un numar:'))
-    if is_superprime(n):
-        print(' este superprim')
-    else:
-        print(' nu este superprim')
-    assert(is_superprime(233)) == True
-    assert(is_superprime(237)) == False
+    assert is_superprime(233) == True
+    assert is_superprime(237) == False
 def is_antipalindrome(n):
     '''
     Determina daca un numar dat n este antipalindrom
@@ -81,11 +71,6 @@ def is_antipalindrome(n):
 
 
 def test_is_antipalindrome():
-    n = int(input('Introduceti un numar:'))
-    if is_antipalindrome(n):
-        print(' este antipalindrom')
-    else:
-        print(' nu este antipalindrom')
     assert is_antipalindrome(1234) == True
     assert is_antipalindrome(2773) == False
 def main():
@@ -107,6 +92,11 @@ def main():
             print("optiune gresita.selecteaza alta optiune")
 main()
 
+if __name__ == '__main__':
 
-
+    test_is_palindrome()
+    test_is_superprime()
+    test_is_antipalindrome()
+main()
+exit(0)
 
